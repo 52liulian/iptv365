@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/logo.png" alt="Logo" width="100" height="100">
+  <img src="favicon.ico" alt="Logo" width="100" height="100">
   <br>
   <p>📺 一站式 IPTV 直播源解决方案</p>
   <p>自动收集、整理和更新全球直播源</p>
