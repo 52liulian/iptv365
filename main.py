@@ -788,8 +788,7 @@ sh_lines = sh_lines + read_txt_to_array('手工区/上海频道.txt')
 jsu_lines = jsu_lines + read_txt_to_array('手工区/江苏频道.txt')
 
 # 瘦身版
-all_lines_simple =  ["⏰更新时间,#genre#"] + [version] + [daily_mtv] + ['\n'] +\
-             ["💓专享源🅰️,#genre#"] + read_txt_to_array('专区/♪专享源①.txt') + ['\n'] + \
+all_lines_simple =  ["💓专享源🅰️,#genre#"] + read_txt_to_array('专区/♪专享源①.txt') + ['\n'] + \
              ["💓专享源🅱️,#genre#"] + read_txt_to_array('专区/♪专享源②.txt') + ['\n'] + \
              ["💓专享央视,#genre#"] + read_txt_to_array('专区/♪优质央视.txt') + ['\n'] + \
              ["💓专享卫视,#genre#"] + read_txt_to_array('专区/♪优质卫视.txt') + ['\n'] + \
@@ -814,11 +813,10 @@ all_lines_simple =  ["⏰更新时间,#genre#"] + [version] + [daily_mtv] + ['\n
              ["☘️浙江频道,#genre#"] + sort_data(zj_dictionary,set(correct_name_data(corrections_name,zj_lines))) + ['\n'] + \
              ["☘️山东频道,#genre#"] + sort_data(shandong_dictionary,set(correct_name_data(corrections_name,shandong_lines))) + ['\n'] + \
              ["上海频道,#genre#"] + sort_data(sh_dictionary,set(correct_name_data(corrections_name,sh_lines))) + ['\n'] + \
-             ["体育频道,#genre#"] + sort_data(ty_dictionary,set(correct_name_data(corrections_name,ty_lines))) + ['\n']
-
+             ["体育频道,#genre#"] + sort_data(ty_dictionary,set(correct_name_data(corrections_name,ty_lines))) + ['\n'] + \
+             ["⏰更新时间,#genre#"] + [version] + [daily_mtv] + ['\n']
 # 合并所有对象中的行文本（去重，排序后拼接）
-all_lines =  ["⏰更新时间,#genre#"] + [version] + [daily_mtv] + ['\n'] +\
-             ["🌐央视频道,#genre#"] + sort_data(ys_dictionary,correct_name_data(corrections_name,ys_lines)) + ['\n'] + \
+all_lines =  ["🌐央视频道,#genre#"] + sort_data(ys_dictionary,correct_name_data(corrections_name,ys_lines)) + ['\n'] + \
              ["📡卫视频道,#genre#"] + sort_data(ws_dictionary,correct_name_data(corrections_name,ws_lines)) + ['\n'] + \
              ["👼儿童频道,#genre#"] + read_txt_to_array('专区/♪儿童专享.txt') + ['\n'] + \
              ["🏀体育频道,#genre#"] + sort_data(ty_dictionary,correct_name_data(corrections_name,ty_lines)) + ['\n'] + \
@@ -867,8 +865,8 @@ all_lines =  ["⏰更新时间,#genre#"] + [version] + [daily_mtv] + ['\n'] +\
              ["☘️解说频道,#genre#"] + sorted(set(js_lines)) + ['\n'] + \
              ["🧧春晚专场,#genre#"] + sorted(set(correct_name_data(corrections_name,cw_lines)))  + ['\n'] + \
              ["🎥直播中国,#genre#"] + sorted(set(correct_name_data(corrections_name,zb_lines))) + ['\n'] + \
-             ["💿MTV频道,#genre#"] + sorted(set(correct_name_data(corrections_name,mtv_lines))) + ['\n']
-
+             ["💿MTV频道,#genre#"] + sorted(set(correct_name_data(corrections_name,mtv_lines))) + ['\n'] + \
+             ["⏰更新时间,#genre#"] + [version] + [daily_mtv] + ['\n'] 
 others_file = "others_output.txt"
 # NEW将合并后的文本写入文件
 new_output_file = "live.txt"
