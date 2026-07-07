@@ -1,5 +1,17 @@
+# 构建产物
 dist
 build
+
+# IDE 配置
 .idea
+.vscode
+
+# Python 环境
 __pycache__/
 .venv
+*.pyc
+*.pyo
+*.pyd
+
+# TRAE 配置
+.trae/
